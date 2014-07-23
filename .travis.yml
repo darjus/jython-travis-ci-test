@@ -2,6 +2,7 @@ language: python
 
 install:
   - sudo apt-get install ant
+  - PROJECT_ROOT=`pwd`
   - cd $HOME; hg clone http://hg.python.org/jython && cd jython && ant;
   - export PATH=$HOME/jython/dist/bin:$PATH;jython --version
 
@@ -11,5 +12,6 @@ before_script:
 
 # test script
 script:
+  - pwd
   - echo "test"
 
