@@ -1,8 +1,9 @@
 language: python
 
 install:
-  - wget 'http://search.maven.org/remotecontent?filepath=org/python/jython-standalone/2.7-b2/jython-standalone-2.7-b2.jar' -O jython-standalone.jar
-  - java -jar jython-standalone.jar -s -d $HOME/jython; export PATH=$HOME/jython:$PATH;jython --version
+  - sudo apt-get install ant
+  - hg clone http://hg.python.org/jython && cd jython && ant;
+  - export PATH=$HOME/jython/dist/bin:$PATH;jython --version
 
 # Before run the test case, we need to make jython run some code
 before_script:
