@@ -6,7 +6,7 @@ install:
 
 # Before run the test case, we need to make jython run some code
 before_script:
-  - jython -c "print ''"
+  - jython -c "print 'HELLO'"
 
 # test script
 script:
